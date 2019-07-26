@@ -1,0 +1,107 @@
+jx is a command line tool for working with Jenkins X
+
+Installing:
+  profile                   Set your jx profile
+  boot                      Boots up Jenkins X in a Kubernetes cluster using GitOps and a Jenkins X Pipeline
+  install                   Install Jenkins X in the current Kubernetes cluster
+  uninstall                 Uninstall the Jenkins X platform
+  upgrade                   Upgrades a resource
+  create cluster            Create a new Kubernetes cluster
+  update cluster            Updates an existing Kubernetes cluster
+  create jenkins token      Adds a new username and API token for a Jenkins server
+  delete jenkins token      Deletes one or more Jenkins user API tokens
+  init                      Init Jenkins X
+
+Adding Projects to Jenkins X:
+  import                    Imports a local project or Git repository into Jenkins
+  create archetype          Create a new app from a Maven Archetype and import the generated code into Git and Jenkins for CI/CD
+  create spring             Create a new Spring Boot application and import the generated code into Git and Jenkins for CI/CD
+  create lile               Create a new Lile based application and import the generated code into Git and Jenkins for CI/CD
+  create micro              Create a new micro based application and import the generated code into Git and Jenkins for CI/CD
+  create quickstart         Create a new app from a Quickstart and import the generated code into Git and Jenkins for CI/CD
+  create quickstartlocation Create a location of quickstarts for your team
+
+Apps:
+  create addon              Creates an addon
+  create token addon        Adds a new token/login for a user for a given addon
+  delete addon              Deletes one or more addons
+  delete token addon        Deletes one or more API tokens for a user on an issue addon server
+  delete app                Deletes one or more apps from Jenkins X
+  delete application        Deletes one or more applications from Jenkins
+  add app                   Adds an app
+
+Git:
+  create git server         Creates a new Git server from a URL and kind
+  delete git server         Deletes one or more Git servers
+  create git token          Adds a new API token for a user on a Git server
+  delete git token          Deletes one or more API tokens for a user on a Git server
+  repository                Opens the web page for the current Git repository in a browser
+
+Working with Kubernetes:
+  compliance                Run compliance tests against Kubernetes cluster
+  completion                Output shell completion code for the given shell (bash or zsh)
+  context                   View or change the current Kubernetes context (Kubernetes cluster)
+  environment               View or change the current environment in the current Kubernetes cluster
+  team                      View or change the current team in the current Kubernetes cluster
+  namespace                 View or change the current namespace context in the current Kubernetes cluster
+  prompt                    Generate the command line prompt for the current team and environment
+  scan                      Perform a scan action
+  shell                     Create a sub shell so that changes to the Kubernetes context, namespace or environment remain local to the shell
+  status                    status of the Kubernetes cluster or named node
+
+Working with Applications:
+  console                   Opens the Jenkins console
+  logs                      Tails the log of the latest pod for a deployment
+  open                      Open a service in a browser
+  rsh                       Opens a terminal in a pod or runs a command in the pod
+  sync                      Synchronises your local files to a DevPod
+
+Working with CloudBees application:
+  cloudbees                 Opens the CloudBees app for Kubernetes for visualising CI/CD and your environments
+  login                     Onboard an user into the CloudBees application
+
+Working with Environments:
+  preview                   Creates or updates a Preview Environment for the current version of an application
+  promote                   Promotes a version of an application to an Environment
+  create addon environment  Create an Environment Controller to handle webhooks and promote changes from GitOps
+  create environment        Create a new Environment which is used to promote your Team's Applications via Continuous Delivery
+  delete addon environment  Deletes the Environment Controller 
+  delete environment        Deletes one or more Environments
+  edit environment          Edits an Environment which is used to promote your Team's Applications via Continuous Delivery
+  get environments          Display one or more Environments
+
+Working with Jenkins X resources:
+  get                       Display one or more resources
+  edit                      Edit a resource
+  create                    Create a new resource
+  update                    Updates an existing resource
+  delete                    Deletes one or more resources
+  add                       Adds a new resource
+  start                     Starts a process such as a pipeline
+  stop                      Stops a process such as a pipeline
+
+Jenkins X Pipeline Commands:
+  step                      pipeline steps
+
+Jenkins X services:
+  controller                Runs a controller
+  gc                        Garbage collects Jenkins X resources
+
+Other Commands:
+  diagnose                  Print diagnostic information about the Jenkins X installation
+  docs                      Open the documentation in a browser
+  help                      Help about any command
+  version                   Print the version information
+
+Options:
+  -b, --batch-mode=false: Runs in batch mode without prompting for user input
+      --config-file='': Configuration file used for installation
+      --install-dependencies=false: Enables automatic dependencies installation when required
+      --no-brew=false: Disables brew package manager on MacOS when installing binary dependencies
+      --skip-auth-secrets-merge=false: Skips merging the secrets from local files with the secrets from Kubernetes cluster
+      --verbose=false: Enables verbose output
+      --version=false: version for jx
+Usage:
+  jx [flags] [options]
+Use "jx <command> --help" for more information about a given command.
+Use "jx options" for a list of global command-line options (applies to all commands).
